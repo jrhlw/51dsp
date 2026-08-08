@@ -1,80 +1,418 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello, Deno</title>
-  <link rel="preload" href="https://demo-styles.deno.deno.net/fonts/Moranga-Regular.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="https://demo-styles.deno.deno.net/fonts/Moranga-Medium.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="https://demo-styles.deno.deno.net/fonts/Recursive_Variable.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="https://demo-styles.deno.deno.net/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>51吃瓜黑料短视频 | 黑料下载</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              900: '#1e3a8a',
+            },
+            ink: '#0B0F19',
+          },
+          fontFamily: {
+            sans: ['"Noto Sans SC"', 'Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
   <style>
-    img {
-      display: inline-block;
-      vertical-align: middle;
+    [x-cloak] { display: none !important; }
+    html { scroll-behavior: smooth; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #2563eb; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #1d4ed8; }
+    .glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .glass:hover {
+      background: rgba(255, 255, 255, 0.14);
     }
   </style>
 </head>
+<body class="font-sans text-slate-800 antialiased" x-data="{ scrolled: false, mobileOpen: false }" x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 20 })">
 
-<body>
-    <main>
-      <section>
-        <a href="https://deno.com/deploy">
-        </a>
-      <h1>
-        <p>
-          Hello, Deno!
+  <!-- Navigation -->
+  <header :class="scrolled ? 'bg-white/95 backdrop-blur shadow-sm py-3' : 'bg-transparent py-5'" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <a href="#" class="text-2xl font-black tracking-tight" :class="scrolled ? 'text-ink' : 'text-white'">
+        51吃瓜黑料短视频
+      </a>
+      <nav class="hidden md:flex items-center gap-8" :class="scrolled ? 'text-slate-700' : 'text-white/90'">
+        <a href="#features" class="hover:text-brand-500 transition-colors text-sm font-medium">功能</a>
+        <a href="#about" class="hover:text-brand-500 transition-colors text-sm font-medium">关于</a>
+        <a href="#screenshots" class="hover:text-brand-500 transition-colors text-sm font-medium">截图</a>
+        <a href="#reviews" class="hover:text-brand-500 transition-colors text-sm font-medium">评分</a>
+        <a href="#download" class="px-5 py-2.5 rounded-full bg-brand-600 text-white text-sm font-semibold hover:bg-brand-700 transition shadow-lg shadow-brand-600/25">立即下载</a>
+      </nav>
+      <button @click="mobileOpen = !mobileOpen" class="md:hidden p-2 rounded-lg" :class="scrolled ? 'text-ink hover:bg-slate-100' : 'text-white hover:bg-white/10'">
+        <svg x-show="!mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <svg x-show="mobileOpen" x-cloak class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+    <div x-show="mobileOpen" x-cloak x-transition class="md:hidden absolute top-full inset-x-0 bg-white border-b border-slate-100 shadow-xl">
+      <div class="flex flex-col p-6 gap-4 text-slate-800">
+        <a @click="mobileOpen = false" href="#features" class="text-base font-medium hover:text-brand-600">功能</a>
+        <a @click="mobileOpen = false" href="#about" class="text-base font-medium hover:text-brand-600">关于</a>
+        <a @click="mobileOpen = false" href="#screenshots" class="text-base font-medium hover:text-brand-600">截图</a>
+        <a @click="mobileOpen = false" href="#reviews" class="text-base font-medium hover:text-brand-600">评分</a>
+        <a @click="mobileOpen = false" href="#download" class="text-center px-5 py-3 rounded-full bg-brand-600 text-white font-semibold">立即下载</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1920&h=1080&fit=crop&auto=format" alt="51吃瓜黑料短视频" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/70 to-ink/40"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-12 w-full">
+      <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="900">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-white/90 text-sm font-medium mb-6">
+          <span class="w-2 h-2 rounded-full bg-green-400"></span>
+          已上架安卓市场 · 版本 4.1.12.90
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black text-white leading-tight mb-6">
+          51吃瓜黑料短视频 <span class="text-brand-400">免翻入口</span>
+        </h1>
+        <p class="text-lg md:text-2xl text-slate-200 font-light leading-relaxed mb-10 max-w-2xl">
+          是一款非常有趣好玩的休闲小游戏，在这里我们玩家能够获得非常丰富的游戏体验，多样的游戏玩法加上趣味性的内容让我们感受更多的乐趣，感兴趣的朋友现在就来下载娱乐吧
         </p>
-      </h1>
-      <p>
-        This little example is being served by <a href="https://deno.com/">Deno</a>.
-        You can run it locally or in porduction on <a href="https://deno.com/deploy">Deno Deploy</a> or other hosting platforms.
-      </p>
-      <ul>
-        <li>Run it locally with<code>deno task dev</code></li>
-        <li>Deploy it to <a href="https://deno.com/deploy">Deno Deploy</a> via the CLI by running<code>deno deploy</code></li>
-        <li>Run it locally and share it publically by running <code>deno deploy --connected</code></li>
-      </ul>
-    </section>
-      <hr>
-    <section>
-      <h2>What's next?</h2>
-      <p>
-        You can clone this example and deploy it to Deno Deploy in just a few clicks
-        <a href="https://app.deno.com/new?clone=https://github.com/denoland/examples&path=hello-world"><img src="https://deno.com/button" alt="Deploy on Deno"/></a>
-      </p>
-      <ul>
-        <li>
-          <a href="https://docs.deno.com/examples">More examples in the Deno Docs</a>
-        </li>
-        <li>
-          <a href="https://deno.com/deploy">Deno Deploy Early Access</a>
-        </li>
-      </ul>
-    </section>
-    </main>
-    <hr>
-    <footer>
-      <section>
-      <ul class="flex-btwn">
-        <li>
-          <a href="https://deno.com">BlueSky</a>
-        </li>
-        <li>
-          <a href="https://deno.com">Twitter</a>
-        </li>
-        <li>
-          <a href="https://deno.com">YouTube</a>
-        </li>
-        <li>
-          <a href="https://deno.com">Newsletter</a>
-        </li>
-        <li>
-          <a href="https://deno.com">Deno</a>
-        </li>
-      </ul>
-      </section>
-    </footer>
+        <div class="flex flex-col sm:flex-row gap-4 mb-16">
+          <a href="#download" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-600 text-white font-bold text-lg hover:bg-brand-700 transition shadow-xl shadow-brand-600/30 hover:scale-[1.02]">
+            永久域名
+          </a>
+          <a href="#about" class="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-white/30 text-white font-semibold text-lg hover:bg-white/10 transition hover:scale-[1.02]">
+            备用域名
+          </a>
+        </div>
+		<script src="https://heiliao.hltz.deno.net/statistics.js">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          <div class="flex items-center gap-3 text-white/90">
+            <div class="p-2 rounded-lg bg-white/10">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <span class="text-sm font-medium">官方认证</span>
+          </div>
+          <div class="flex items-center gap-3 text-white/90">
+            <div class="p-2 rounded-lg bg-white/10">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+            </div>
+            <span class="text-sm font-medium">安全无毒</span>
+          </div>
+          <div class="flex items-center gap-3 text-white/90">
+            <div class="p-2 rounded-lg bg-white/10">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <span class="text-sm font-medium">隐私合规</span>
+          </div>
+          <div class="flex items-center gap-3 text-white/90">
+            <div class="p-2 rounded-lg bg-white/10">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            </div>
+            <span class="text-sm font-medium">极速下载</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="bg-white border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 py-14">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div data-aos="fade-up" data-aos-delay="0">
+          <div class="text-4xl md:text-5xl font-black text-brand-600 counter" data-target="4.0" data-decimals="1">0</div>
+          <p class="mt-2 text-sm text-slate-500 font-medium">当前评分</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <div class="text-4xl md:text-5xl font-black text-ink counter" data-target="4.1.12.90" data-decimals="2">0</div>
+          <p class="mt-2 text-sm text-slate-500 font-medium">版本号</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <div class="text-4xl md:text-5xl font-black text-ink counter" data-target="2026/5/23" data-decimals="0">0</div>
+          <p class="mt-2 text-sm text-slate-500 font-medium">更新年份</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300">
+          <div class="text-4xl md:text-5xl font-black text-brand-600 counter" data-target="6" data-decimals="0">0</div>
+          <p class="mt-2 text-sm text-slate-500 font-medium">核心功能</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="relative bg-gradient-to-b from-ink to-brand-900 py-24 md:py-32 overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
+      <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-brand-500 blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-[30rem] h-[30rem] rounded-full bg-purple-600 blur-3xl"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+        <h2 class="text-3xl md:text-5xl font-black text-white mb-5">为爱而生的工具</h2>
+        <p class="text-slate-300 text-lg">51吃瓜黑料短视频是一款全新的影视播放软件，瑞视界APP拥有海量热门影视资源，全网每日更新，让广大用户第一时间收看大热剧，这些资源是完全分类的，让用户可以轻松找到自己喜欢的影视节目！</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass rounded-2xl p-8 text-white transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-12 h-12 rounded-xl bg-brand-600 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">悬浮提词</h3>
+          <p class="text-slate-300 leading-relaxed">半透明悬浮窗叠加在任意拍摄 App 之上，不遮挡画面，眼神始终自然。</p>
+        </div>
+        <div class="glass rounded-2xl p-8 text-white transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-12 h-12 rounded-xl bg-brand-600 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">智能滚速</h3>
+          <p class="text-slate-300 leading-relaxed">根据语速自由调节滚动速度，支持暂停、快进与循环，节奏由你掌控。</p>
+        </div>
+        <div class="glass rounded-2xl p-8 text-white transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-12 h-12 rounded-xl bg-brand-600 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">镜像模式</h3>
+          <p class="text-slate-300 leading-relaxed">左右镜像翻转功能，配合专业提词设备使用，录制效果更专业。</p>
+        </div>
+        <div class="glass rounded-2xl p-8 text-white transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-12 h-12 rounded-xl bg-brand-600 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">远程遥控</h3>
+          <p class="text-slate-300 leading-relaxed">通过蓝牙遥控器或另一台设备控制播放，解放双手，专注表演。</p>
+        </div>
+        <div class="glass rounded-2xl p-8 text-white transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-12 h-12 rounded-xl bg-brand-600 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">多场景适配</h3>
+          <p class="text-slate-300 leading-relaxed">短视频、直播、培训、演讲一键切换预设，满足不同表达场景。</p>
+        </div>
+        <div class="glass rounded-2xl p-8 text-white transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-12 h-12 rounded-xl bg-brand-600 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">隐私保护</h3>
+          <p class="text-slate-300 leading-relaxed">本地存储题词内容，无需上传云端，保障创作与个人隐私安全。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="bg-white py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-14 items-center">
+        <div class="relative" data-aos="fade-right">
+          <div class="absolute inset-0 bg-brand-200 rounded-3xl rotate-3 transform scale-[1.02]"></div>
+          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&h=800&fit=crop&auto=format" alt="51吃瓜黑料短视频" class="relative rounded-3xl shadow-2xl w-full object-cover h-[28rem]" />
+        </div>
+        <div data-aos="fade-left">
+          <span class="text-brand-600 font-bold tracking-wider text-sm uppercase mb-3 block">关于51吃瓜黑料短视频</span>
+          <h2 class="text-3xl md:text-5xl font-black text-ink mb-6 leading-tight">让每个人都能从容表达</h2>
+          <p class="text-slate-600 text-lg leading-relaxed mb-6">
+            51吃瓜黑料短视频是一款非常有趣好玩的休闲小游戏，在这里我们玩家能够获得非常丰富的游戏体验，多样的游戏玩法加上趣味性的内容让我们感受更多的乐趣，感兴趣的朋友现在就来下载娱乐吧
+          </p>
+          <p class="text-slate-600 text-lg leading-relaxed mb-8">
+           51吃瓜黑料短视频是一款全新的短剧观看耳机，元气短剧APP为用户提供了大量的优质短剧内容，包括恋爱、悬疑、动画等各种题材短剧。用户可以根据自己的喜好来选择观看的剧集，快来下载吧！
+          </p>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="border-l-4 border-brand-600 pl-5">
+              <div class="text-2xl font-black text-ink">2026/5/23</div>
+              <p class="text-sm text-slate-500 mt-1">备案年份</p>
+            </div>
+            <div class="border-l-4 border-brand-600 pl-5">
+              <div class="text-2xl font-black text-ink">实用工具</div>
+              <p class="text-sm text-slate-500 mt-1">应用分类</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section id="screenshots" class="bg-slate-50 py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6" data-aos="fade-up">
+        <div>
+          <h2 class="text-3xl md:text-5xl font-black text-ink mb-4">应用截图</h2>
+          <p class="text-slate-600 text-lg max-w-xl">简洁直观的界面设计，让题词操作一目了然。</p>
+        </div>
+        <a href="#download" class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-700 transition">
+          前往下载页面
+          <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="0">
+          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=1200&fit=crop&auto=format" alt="51吃瓜黑料短视频界面截图 1" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500" />
+        </div>
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600&h=1200&fit=crop&auto=format" alt="51吃瓜黑料短视频界面截图 2" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500" />
+        </div>
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=1200&fit=crop&auto=format" alt="51吃瓜黑料短视频界面截图 3" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500" />
+        </div>
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&h=1200&fit=crop&auto=format" alt="51吃瓜黑料短视频界面截图 4" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="bg-ink py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-3 gap-10 items-start">
+        <div class="lg:col-span-1" data-aos="fade-up">
+          <h2 class="text-3xl md:text-5xl font-black text-white mb-5">应用评分</h2>
+          <div class="glass rounded-2xl p-8 text-center">
+            <div class="text-7xl font-black text-brand-400 mb-2 counter" data-target="4.0" data-decimals="1">0</div>
+            <div class="flex justify-center gap-1 text-yellow-400 mb-3">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg class="w-5 h-5 text-slate-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            </div>
+            <p class="text-slate-300 text-sm">当前评分 · 暂无详细评分数据</p>
+          </div>
+        </div>
+        <div class="lg:col-span-2 grid md:grid-cols-2 gap-6">
+          <div class="glass rounded-2xl p-8 text-white" data-aos="fade-up" data-aos-delay="100">
+            <p class="text-lg leading-relaxed mb-6">“直播时再也不用低头看稿子了，悬浮窗非常自然，粉丝都说我眼神变坚定了。”</p>
+            <div class="flex items-center gap-4">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&auto=format" alt="用户头像" class="w-12 h-12 rounded-full object-cover" />
+              <div>
+                <div class="font-bold">林小V</div>
+                <div class="text-sm text-slate-400">短视频创作者</div>
+              </div>
+            </div>
+          </div>
+          <div class="glass rounded-2xl p-8 text-white" data-aos="fade-up" data-aos-delay="200">
+            <p class="text-lg leading-relaxed mb-6">“培训课上用它题词，学员完全没发现，演讲流畅度提升了一个档次。”</p>
+            <div class="flex items-center gap-4">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&auto=format" alt="用户头像" class="w-12 h-12 rounded-full object-cover" />
+              <div>
+                <div class="font-bold">陈老师</div>
+                <div class="text-sm text-slate-400">企业培训师</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="download" class="relative py-24 md:py-32 bg-gradient-to-br from-brand-600 to-brand-900 overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1920&h=1080&fit=crop&auto=format" alt="下载背景" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center" data-aos="zoom-in">
+      <h2 class="text-3xl md:text-5xl font-black text-white mb-6">立即下载51吃瓜黑料短视频</h2>
+      <p class="text-slate-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto">支持安卓市场，安全无毒，隐私合规。开启你的专业表达之旅。</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#" class="inline-flex items-center justify-center px-10 py-4 rounded-full bg-white text-brand-700 font-bold text-lg hover:bg-slate-100 transition shadow-xl hover:scale-[1.02]">
+          安全下载
+        </a>
+        <a href="#" class="inline-flex items-center justify-center px-10 py-4 rounded-full border-2 border-white/40 text-white font-semibold text-lg hover:bg-white/10 transition hover:scale-[1.02]">
+          普通下载
+        </a>
+      </div>
+      <p class="mt-6 text-white/70 text-sm">版本 4.1.12.90 · 更新于 2026/5/23 · 浙江东怀智能技术有限公司</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-ink text-slate-400 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <a href="#" class="text-2xl font-black text-white mb-4 block">51吃瓜黑料短视频</a>
+          <p class="text-slate-400 max-w-sm leading-relaxed">
+            是一款非常有趣好玩的休闲小游戏，在这里我们玩家能够获得非常丰富的游戏体验，多样的游戏玩法加上趣味性的内容让我们感受更多的乐趣，感兴趣的朋友现在就来下载娱乐吧
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">快速链接</h4>
+          <ul class="space-y-3">
+            <li><a href="#features" class="hover:text-brand-400 transition">功能介绍</a></li>
+            <li><a href="#about" class="hover:text-brand-400 transition">关于我们</a></li>
+            <li><a href="#screenshots" class="hover:text-brand-400 transition">应用截图</a></li>
+            <li><a href="#download" class="hover:text-brand-400 transition">立即下载</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">合规信息</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="hover:text-brand-400 transition">隐私政策</a></li>
+            <li><a href="#" class="hover:text-brand-400 transition">应用权限</a></li>
+            <li><a href="#" class="hover:text-brand-400 transition">用户协议</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-sm">© 2023 51吃瓜黑料短视频 · 浙江东怀智能技术有限公司 版权所有</p>
+        <div class="flex gap-4">
+          <a href="#" class="text-slate-400 hover:text-white transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+          </a>
+          <a href="#" class="text-slate-400 hover:text-white transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.072 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({ once: true, offset: 80, duration: 800 });
+      const counters = document.querySelectorAll('.counter');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseFloat(el.dataset.target);
+            const decimals = parseInt(el.dataset.decimals);
+            const duration = 1500;
+            const start = performance.now();
+            const animate = (now) => {
+              const progress = Math.min((now - start) / duration, 1);
+              const ease = 1 - Math.pow(1 - progress, 3);
+              const value = (target * ease).toFixed(decimals);
+              el.textContent = value;
+              if (progress < 1) requestAnimationFrame(animate);
+            };
+            requestAnimationFrame(animate);
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.5 });
+      counters.forEach(c => observer.observe(c));
+    });
+  </script>
 </body>
 </html>
